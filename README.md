@@ -58,7 +58,7 @@ This Regex will test that the url matches the ipfspodcasting format.
 ```
 ^\/ipfs\/Qm[1-9A-HJ-NP-Za-km-z]{44}(\/.*\.(?i)(mp3|mp4|m4a))
 ```
-Adding this to the (apache) proxy will allow urls that match, or redirect to ipfs.io for any mismatches. Even a mismatch should perform normally using ipfs.io.
+Adding this to the (apache) proxy will allow urls that match, or redirect any mismatches to ipfs.io. Even a mismatch should perform normally using ipfs.io.
 
 (sample [virtualhost.conf (apache)](https://github.com/Cameron-IPFSPodcasting/podcast-Gateway/blob/main/sample-apache-virtualhost.conf).
 ```
