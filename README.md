@@ -80,7 +80,7 @@ A PC20#146 episode (works - stays on gateway.ipfspodcasting.net) - https://gatew
 
 Changing the filename to "mp5" doesn't match, so redirects to ipfs.io  (then fails because it doesn't exist) - https://gateway.ipfspodcasting.net/ipfs/QmbBW9jBNh2G2wWXyywTQ9mSLuNXFUAmReSkSeRJsEbycH/PC20-146-2023-09-15-Final.mp5
 
-All these urls will redirect to ipfs.io because they don't match the ipfspodcasting url format. Therefore aren't being served by the ipfspodcasting gateway.
+These urls will redirect to ipfs.io because they don't match the ipfspodcasting url format. Therefore aren't being served by the ipfspodcasting gateway.
 
 An Apollo 12 Image - https://gateway.ipfspodcasting.net/ipfs/QmSnuWmxptJZdLJpKRarxBMS2Ju2oANVrgbr2xWbie9b2D/albums/QXBvbGxvIDEyIE1hZ2F6aW5lIDQ2L1k=/21688456932_c56ec92952_o.jpg
 
