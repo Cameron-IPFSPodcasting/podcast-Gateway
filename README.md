@@ -60,7 +60,7 @@ This Regex will test that the url matches the ipfspodcasting format.
 ```
 Adding this to the (apache) proxy will allow urls that match, or redirect any mismatches to ipfs.io. Even a mismatch should perform normally using ipfs.io.
 
-(sample [virtualhost.conf (apache)](https://github.com/Cameron-IPFSPodcasting/podcast-Gateway/blob/main/sample-apache-virtualhost.conf).
+(sample [virtualhost.conf (apache)](https://github.com/Cameron-IPFSPodcasting/podcast-Gateway/blob/main/sample-apache-virtualhost.conf)).
 ```
 <VirtualHost 192.168.1.1:81>
   RewriteEngine On
