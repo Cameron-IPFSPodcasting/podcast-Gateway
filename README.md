@@ -48,7 +48,7 @@ The current ipfspodcasting database contains 128K enclosures. This data was used
 99.7% have the mp3, m4a, or mp4 extension.
 
 ### URL Filter
-A simple filter that matches the folder & file extension format above will handle nearly 99.7% of the podcast media files.
+A simple filter that matches the folder & file extension format above will handle 99.7% of the podcast media files.
 
 If the request does not match this format, your gateway can redirect to ipfs.io for handling non-standard/non-podcast urls.
 
