@@ -32,7 +32,7 @@ At this point, you're running a public IPFS gateway. Any IPFS url to your gatewa
 # Configure an "IPFS Podcasting Gateway"
 For a "Podcast Gateway", we only want to serve podcast media, so need to block all non-podcast urls.
 
-A quick way to become a "podcast only" gateway is to filter urls that only match the IPFS Podcasting format.
+A quick way to become a "podcast only" gateway is to filter urls that only match the ipfspodcasting format.
 
 All media files on [IPFSPodcasting.net](https://ipfspodcasting.net) are "wrapped" in a hashed folder. This is how the web url appears in a gateway request for all ipfspodcasting enclosures.
 
