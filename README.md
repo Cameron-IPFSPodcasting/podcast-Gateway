@@ -37,32 +37,26 @@ All media files on [IPFSPodcasting.net](https://ipfspodcasting.net) are "wrapped
 
 This is how the web url appears in a gateway request for all ipfspodcasting enclosures.
 
-`https://<gateway>/ipfs/<hash>/<filename>`
+- `https://<gateway>/ipfs/<hash>/<filename>`
+- [https://ipfs.io/ipfs/QmcffbRzN7qcF9xhbH52Fh5TvfddKt3FRucMsX8Qbn1GV5/PC20-145-2023-09-08-Final.mp3](https://gateway.ipfspodcasting.net/ipfs/QmX52fQAESMZTSjDZWNUReViC6LUJfeHiHPA3eS5viq5Q1/PC20-144-2023-09-01-Final.mp3#t=4828)
 
-[https://ipfs.io/ipfs/QmcffbRzN7qcF9xhbH52Fh5TvfddKt3FRucMsX8Qbn1GV5/PC20-145-2023-09-08-Final.mp3](https://gateway.ipfspodcasting.net/ipfs/QmX52fQAESMZTSjDZWNUReViC6LUJfeHiHPA3eS5viq5Q1/PC20-144-2023-09-01-Final.mp3#t=4828)
+## Enclosure Analysis
+The current ipfspodcasting database contains 128K enclosures. This data was used to analyze enclosure extensions.
 
-The current ipfspodcasting database contains 128K enclosures. This data was used to analyze enclosure filenames/extensions.
-
-95.96%	mp3
-2.75%	m4a
-0.99%	mp4
-0.13%	jpeg
-0.05%	m4v
-0.04%	pdf
-0.04%	jpg
-0.04%	png
+![Untitled](https://github.com/Cameron-IPFSPodcasting/podcast-Gateway/assets/103131615/d89ecd40-49fa-4226-ba5c-b7947cf98f0c)
 
 96% of enclosures end in the .mp3 extension. 
 99.7% have the mp3, m4a, or mp4 extension.
 
-A simple filter that matches this folder & file extension format will handle nearly 100% of the podcast media files.
+### URL Filter
+A simple filter that matches the folder & file extension format above will handle nearly 100% of the podcast media files.
 
-If the request does not match this format, your gateway can redirect to ipfs.io to let ipfs.io handle any non-standard/non-podcast urls.
+If the request does not match this format, your gateway can redirect to ipfs.io for handling non-standard/non-podcast urls.
 
-People could sneak past this filter by using the same hash/filename.mp3 format. If it becomes a bigger issue, we can investigate block lists. The key objective, is that we are not hosting malware in the form of applications(exe), powershell, pdfs. And are not hosting IPFS hosted websites or videos.
+People could sneak past this filter by using the same hash/filename.mp3 format. If it becomes a bigger issue, we can investigate block lists. The key objective, is that we are not hosting malware in the form of applications (exe), powershell, or pdfs. And are not hosting IPFS hosted websites or videos.
 
 This Regex will test that the url matches the podcasting format (99.7% of the enclosures on ipfspodcasting.net).
-^\/ipfs\/Qm[1-9A-HJ-NP-Za-km-z]{44}(\/.*\.(?i)(mp3|mp4|m4a))
+`^\/ipfs\/Qm[1-9A-HJ-NP-Za-km-z]{44}(\/.*\.(?i)(mp3|mp4|m4a))`
 
 Adding this to my (apache) proxy will pass to my gateway on a match, or ipfs.io for any mismatches. Even a mismatch should perform normally using ipfs.io (unless they have setup block lists for the url).
 
