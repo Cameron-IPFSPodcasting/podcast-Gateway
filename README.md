@@ -2,15 +2,15 @@
 Setting up an IPFS gateway is easy.
 Configuring it properly is difficult.
 
-This is not a complete solution for running an IPFS gateway. There are many ways to run an IPFS gateway. This repo is for guidelines and discussion around setting up an "IPFS Podcasting Gateway".
+This is not a complete solution for running an IPFS gateway. There are many ways to run an IPFS gateway. This repository is for guidelines and discussion around setting up an "IPFS Podcasting Gateway".
 
 This repository is a collection of code snippets & documentation to help setting up & configuring an IPFS Gateway that is compatible with [IPFSPodcasting.net](https://ipfspodcasting.net).
 
 ## Setting up a basic gateway...
-  download ipfs https://dist.ipfs.tech/#kubo
-  extract & install 
-  run "ipfs init"
-  launch the daemon with "ipfs daemon"
+- Download IPFS from [https://dist.ipfs.tech/#kubo](https://dist.ipfs.tech/#kubo)
+- Extract & Install 
+- Run "`ipfs init`"
+- Launch the daemon with "`ipfs daemon`"
   
   The gateways is now running with a webui at 127.0.0.1:5001/webui
   And a gateway running at 127.0.0.1:8080
