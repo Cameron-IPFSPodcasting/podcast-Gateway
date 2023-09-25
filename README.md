@@ -4,7 +4,7 @@ Configuring it properly is difficult.
 
 This is not a complete solution for running an IPFS gateway. There are many ways to run an IPFS gateway. This repo is for guidelines and discussion around setting up an "IPFS Podcasting Gateway".
 
-This repository is a collection of code snippets & documentation to help setting up & configuring an IPFS Gateway that is compatible with [https://ipfspodcasting.net](IPFSPodcasting.net).
+This repository is a collection of code snippets & documentation to help setting up & configuring an IPFS Gateway that is compatible with [IPFSPodcasting.net](https://ipfspodcasting.net).
 
 ##Setting up a basic gateway...
   download ipfs https://dist.ipfs.tech/#kubo
