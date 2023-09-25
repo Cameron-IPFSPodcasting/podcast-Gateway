@@ -39,7 +39,7 @@ This is how the web url appears in a gateway request for all ipfspodcasting encl
 
 `https://<gateway>/ipfs/<hash>/<filename>`
 
-https://ipfs.io/ipfs/QmcffbRzN7qcF9xhbH52Fh5TvfddKt3FRucMsX8Qbn1GV5/PC20-145-2023-09-08-Final.mp3
+[https://ipfs.io/ipfs/QmcffbRzN7qcF9xhbH52Fh5TvfddKt3FRucMsX8Qbn1GV5/PC20-145-2023-09-08-Final.mp3](https://gateway.ipfspodcasting.net/ipfs/QmX52fQAESMZTSjDZWNUReViC6LUJfeHiHPA3eS5viq5Q1/PC20-144-2023-09-01-Final.mp3#t=4828)
 
 The current ipfspodcasting database contains 128K enclosures. This data was used to analyze enclosure filenames/extensions.
 
