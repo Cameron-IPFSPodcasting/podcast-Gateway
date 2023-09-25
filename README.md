@@ -25,8 +25,9 @@ Refer to the [IPFS documentation](https://docs.ipfs.tech/how-to/gateway-best-pra
 ## Domain / SSL
 Configure a domain name for your gateway and setup SSL.
 
-
 At this point, you're running a public IPFS gateway. Any IPFS url to your gateway will resolve and serve IPFS content. 
+
+---
 
 # Configure an "IPFS Podcasting Gateway"
 For a "Podcasting Gateway", we only want to serve podcast media, so need to block all non-podcast urls.
@@ -38,7 +39,7 @@ All media files on [IPFSPodcasting.net](https://ipfspodcasting.net) are "wrapped
 This is how the web url appears in a gateway request for all ipfspodcasting enclosures.
 
 - `https://<gateway>/ipfs/<hash>/<filename>`
-- [https://ipfs.io/ipfs/QmcffbRzN7qcF9xhbH52Fh5TvfddKt3FRucMsX8Qbn1GV5/PC20-145-2023-09-08-Final.mp3](https://gateway.ipfspodcasting.net/ipfs/QmX52fQAESMZTSjDZWNUReViC6LUJfeHiHPA3eS5viq5Q1/PC20-144-2023-09-01-Final.mp3#t=4828)
+- [https://ipfs.io/ipfs/QmcffbRzN7qcF9xhbH52Fh5TvfddKt3FRucMsX8Qbn1GV5/PC20-145-2023-09-08-Final.mp3](https://ipfs.io/ipfs/QmX52fQAESMZTSjDZWNUReViC6LUJfeHiHPA3eS5viq5Q1/PC20-144-2023-09-01-Final.mp3#t=4828)
 
 ## Enclosure Analysis
 The current ipfspodcasting database contains 128K enclosures. This data was used to analyze enclosure extensions.
@@ -61,7 +62,7 @@ This Regex will test that the url matches the ipfspodcasting format.
 ```
 Adding this to the (apache) proxy will allow urls that match, or redirect to ipfs.io for any mismatches. Even a mismatch should perform normally using ipfs.io.
 
-(sample [ipfs-gateway.conf (apache)](https://github.com/Cameron-IPFSPodcasting/podcast-Gateway/blob/main/sample-apache-virtualhost.conf).
+(sample [virtualhost.conf (apache)](https://github.com/Cameron-IPFSPodcasting/podcast-Gateway/blob/main/sample-apache-virtualhost.conf).
 ```
 <VirtualHost 192.168.1.1:81>
   RewriteEngine On
@@ -74,16 +75,22 @@ Adding this to the (apache) proxy will allow urls that match, or redirect to ipf
   ProxyPreserveHost On
 </VirtualHost>
 ```
-These links use the ipfspodcasting gateway (which is configured to check the url for a valid format)...
+### Sample / Test urls
+These links use the ipfspodcasting gateway (which is configured to check the url for a valid format). You can test your gateway by changing the domain to match your gateway's url...
 
-A PC20#146 episode (works - stays on gateway.ipfspodcasting.net)...
-https://gateway.ipfspodcasting.net/ipfs/QmbBW9jBNh2G2wWXyywTQ9mSLuNXFUAmReSkSeRJsEbycH/PC20-146-2023-09-15-Final.mp3
-Changing the filename to "mp5" doesn't match, so redirects to ipfs.io  (then fails because it doesn't exist)
-https://gateway.ipfspodcasting.net/ipfs/QmbBW9jBNh2G2wWXyywTQ9mSLuNXFUAmReSkSeRJsEbycH/PC20-146-2023-09-15-Final.mp5
+A PC20#146 episode (works - stays on gateway.ipfspodcasting.net) - https://gateway.ipfspodcasting.net/ipfs/QmbBW9jBNh2G2wWXyywTQ9mSLuNXFUAmReSkSeRJsEbycH/PC20-146-2023-09-15-Final.mp3
+
+Changing the filename to "mp5" doesn't match, so redirects to ipfs.io  (then fails because it doesn't exist) - https://gateway.ipfspodcasting.net/ipfs/QmbBW9jBNh2G2wWXyywTQ9mSLuNXFUAmReSkSeRJsEbycH/PC20-146-2023-09-15-Final.mp5
 
 All these urls will redirect to ipfs.io because they don't match the ipfspodcasting url format. Therefore aren't being served by the ipfspodcasting gateway.
+
 Apollo12 Image - https://gateway.ipfspodcasting.net/ipfs/QmSnuWmxptJZdLJpKRarxBMS2Ju2oANVrgbr2xWbie9b2D/albums/QXBvbGxvIDEyIE1hZ2F6aW5lIDQ2L1k=/21688456932_c56ec92952_o.jpg
+
 An IPFS hosted website - https://gateway.ipfspodcasting.net/ipfs/QmNksJqvwHzNtAtYZVqFZFfdCVciY4ojTU2oFZQSFG9U7B/index.html
+
 A viral video - https://gateway.ipfspodcasting.net/ipfs/QmcniBv7UQ4gGPQQW2BwbD4ZZHzN3o3tPuNLZCbBchd1zh#t=85
 
-More improvements to come as they are discovered/required. This approach should handle the majority of podcast media files used my IPFSPodcasting.net while blocking/forwarding the rest to ipfs.io.
+### Conclusion
+This approach should handle the majority of podcast media files used by [IPFSPodcasting.net](https://ipfspodcasting.net) while blocking/forwarding the rest to ipfs.io.
+
+More improvements to come as they are discovered/required. Use the discussions tab to discuss other options, or the issues tab to report problems with existing options.
