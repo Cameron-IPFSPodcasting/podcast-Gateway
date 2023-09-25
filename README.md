@@ -9,35 +9,39 @@ This repository is a collection of code snippets & documentation to help setting
 ## Setting up a basic gateway...
 - Download IPFS from [https://dist.ipfs.tech/#kubo](https://dist.ipfs.tech/#kubo)
 - Extract & Install 
-- Run "`ipfs init`"
-- Launch the daemon with "`ipfs daemon`"
+- Run `ipfs init` to configure your gateway
+- Launch the IPFS daemon with `ipfs daemon`
   
-  The gateways is now running with a webui at 127.0.0.1:5001/webui
-  And a gateway running at 127.0.0.1:8080
+A gateway is now running with a webui at [127.0.0.1:5001/webui](http://127.0.0.1:5001/webui)
+And a gateway running at [127.0.0.1:8080](http://127.0.0.1:8080/ipfs/QmYwAPJzv5CZsnA625s3Xf2nemtYgPpHdWEz79ojWnPbdG/readme)
 
-  configure your server to start IPFS on boot
+- Configure your server to start IPFS on boot
   
 ## Configuring a reverse proxy...
-  A reverse proxy is preferred for more control over access to your gateway.
-  https://docs.ipfs.tech/how-to/gateway-best-practices/#self-hosting-a-gateway
+A reverse proxy is preferred for more control over access to your gateway.
+
+Refer to the [IPFS documentation](https://docs.ipfs.tech/how-to/gateway-best-practices/#self-hosting-a-gateway) for guidelines on setting up an IPFS gateway.
 
 ## Domain / SSL
-  Pick a domain name for your gateway and setup SSL.
-  
+Configure a domain name for your gateway and setup SSL.
+
+
 At this point, you're running a public IPFS gateway. Any IPFS url to your gateway will resolve and serve IPFS content. 
 
-For an "IPFS Podcasting Gateway", we only want to serve podcast media, so need to block all non-podcast urls.
+# Configure an "IPFS Podcasting Gateway"
+For a "Podcasting Gateway", we only want to serve podcast media, so need to block all non-podcast urls.
 
-## Configure an "IPFS Podcasting Gateway"
+A quick way to become a "podcast only" gateway is to filter urls that only match the IPFS Podcasting format.
 
-	A quick way to become a "podcast only" gateway is to filter urls that only match the IPFS Podcasting format.
+All media files on [IPFSPodcasting.net](https://ipfspodcasting.net) are "wrapped" in a hashed folder.
 
-	All media files on ipfspodcasting.net are "wrapped" in a hashed folder. This is how the web url appears in a gateway request for all ipfspodcasting enclosures.
+This is how the web url appears in a gateway request for all ipfspodcasting enclosures.
 
-	https://<gateway>/ipfs/<hash>/<filename>
-	https://ipfs.io/ipfs/QmbBW9jBNh2G2wWXyywTQ9mSLuNXFUAmReSkSeRJsEbycH/PC20-146-2023-09-15-Final.mp3
+`https://<gateway>/ipfs/<hash>/<filename>`
 
-	The current ipfspodcasting database contains 128K enclosures. This data was used to analyze enclosure filenames/extension
+https://ipfs.io/ipfs/QmcffbRzN7qcF9xhbH52Fh5TvfddKt3FRucMsX8Qbn1GV5/PC20-145-2023-09-08-Final.mp3
+
+The current ipfspodcasting database contains 128K enclosures. This data was used to analyze enclosure filenames/extensions.
 
 95.96%	mp3
 2.75%	m4a
