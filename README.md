@@ -1,4 +1,4 @@
-# IPFS Podcast Gateway
+# IPFS Podcasting Gateway
 Setting up an IPFS gateway is easy.
 Configuring it properly is difficult.
 
