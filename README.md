@@ -36,7 +36,7 @@ A quick way to become a "podcast only" gateway is to filter urls that only match
 
 All media files on [IPFSPodcasting.net](https://ipfspodcasting.net) are "wrapped" in a hashed folder. This is how the web url appears in a gateway request for all ipfspodcasting enclosures.
 
-- `https://<gateway>/ipfs/<hash>/<filename>`
+- `https://<gateway>/ipfs/<hash>/<filename>.<extension>`
 - [https://ipfs.io/ipfs/QmcffbRzN7qcF9xhbH52Fh5TvfddKt3FRucMsX8Qbn1GV5/PC20-145-2023-09-08-Final.mp3](https://ipfs.io/ipfs/QmX52fQAESMZTSjDZWNUReViC6LUJfeHiHPA3eS5viq5Q1/PC20-144-2023-09-01-Final.mp3#t=4828)
 
 ## Enclosure Analysis
