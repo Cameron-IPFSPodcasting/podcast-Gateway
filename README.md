@@ -6,7 +6,7 @@ This is not a complete solution for running an IPFS gateway. There are many ways
 
 This repository is a collection of code snippets & documentation to help setting up & configuring an IPFS Gateway that is compatible with [IPFSPodcasting.net](https://ipfspodcasting.net).
 
-##Setting up a basic gateway...
+## Setting up a basic gateway...
   download ipfs https://dist.ipfs.tech/#kubo
   extract & install 
   run "ipfs init"
@@ -17,18 +17,18 @@ This repository is a collection of code snippets & documentation to help setting
 
   configure your server to start IPFS on boot
   
-##Configuring a reverse proxy...
+## Configuring a reverse proxy...
   A reverse proxy is preferred for more control over access to your gateway.
   https://docs.ipfs.tech/how-to/gateway-best-practices/#self-hosting-a-gateway
 
-##Domain / SSL
+## Domain / SSL
   Pick a domain name for your gateway and setup SSL.
   
 At this point, you're running a public IPFS gateway. Any IPFS url to your gateway will resolve and serve IPFS content. 
 
 For an "IPFS Podcasting Gateway", we only want to serve podcast media, so need to block all non-podcast urls.
 
-##Configure an "IPFS Podcasting Gateway"
+## Configure an "IPFS Podcasting Gateway"
 
 	A quick way to become a "podcast only" gateway is to filter urls that only match the IPFS Podcasting format.
 
