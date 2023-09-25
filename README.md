@@ -49,18 +49,19 @@ The current ipfspodcasting database contains 128K enclosures. This data was used
 99.7% have the mp3, m4a, or mp4 extension.
 
 ### URL Filter
-A simple filter that matches the folder & file extension format above will handle nearly 100% of the podcast media files.
+A simple filter that matches the folder & file extension format above will handle nearly 99.7% of the podcast media files.
 
 If the request does not match this format, your gateway can redirect to ipfs.io for handling non-standard/non-podcast urls.
 
-People could sneak past this filter by using the same hash/filename.mp3 format. If it becomes a bigger issue, we can investigate block lists. The key objective, is that we are not hosting malware in the form of applications (exe), powershell, or pdfs. And are not hosting IPFS hosted websites or videos.
+Of course, people could sneak past this filter by using the same hash/filename.mp3 format. If it becomes a bigger issue, we can investigate block lists. The key objective, is that we are not hosting malware in the form of applications (exe), powershell, or pdfs. And are not providing bandwidth to IPFS hosted websites or videos.
 
-This Regex will test that the url matches the podcasting format (99.7% of the enclosures on ipfspodcasting.net).
-`^\/ipfs\/Qm[1-9A-HJ-NP-Za-km-z]{44}(\/.*\.(?i)(mp3|mp4|m4a))`
+This Regex will test that the url matches the ipfspodcasting format.
+```
+^\/ipfs\/Qm[1-9A-HJ-NP-Za-km-z]{44}(\/.*\.(?i)(mp3|mp4|m4a))
+```
+Adding this to the (apache) proxy will allow urls that match, or redirect to ipfs.io for any mismatches. Even a mismatch should perform normally using ipfs.io.
 
-Adding this to my (apache) proxy will pass to my gateway on a match, or ipfs.io for any mismatches. Even a mismatch should perform normally using ipfs.io (unless they have setup block lists for the url).
-
-(sample ipfs-gateway.conf for apache. This gateway runs on a LAN with port forwards from cloudflare to manage SSL)
+(sample ipfs-gateway.conf (apache). This gateway runs on a LAN with port forwarding from cloudflare to manage SSL)
 ```
 <VirtualHost 192.168.1.1:81>
   RewriteEngine On
