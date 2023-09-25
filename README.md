@@ -54,7 +54,7 @@ If the request does not match this format, your gateway can redirect to ipfs.io 
 
 Of course, people could sneak past this filter by using the same hash/filename.mp3 format. If it becomes a bigger issue, we can investigate block lists. The key objective, is that we are not hosting malware in the form of applications (exe), powershell, or pdfs. And are not providing bandwidth to IPFS hosted websites or videos.
 
-This regex will test that the url matches the ipfspodcasting format.
+This regex will test if the url matches the ipfspodcasting format.
 ```
 ^\/ipfs\/Qm[1-9A-HJ-NP-Za-km-z]{44}(\/.*\.(?i)(mp3|mp4|m4a))
 ```
