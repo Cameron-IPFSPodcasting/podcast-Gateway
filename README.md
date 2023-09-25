@@ -62,7 +62,7 @@ Adding this to the (apache) proxy will allow urls that match, or redirect any mi
 
 (sample [virtualhost.conf (apache)](https://github.com/Cameron-IPFSPodcasting/podcast-Gateway/blob/main/sample-apache-virtualhost.conf)).
 ```
-<VirtualHost 192.168.1.1:81>
+<VirtualHost 192.168.1.1:80>
   RewriteEngine On
   RewriteCond "%{REQUEST_URI}" "^\/ipfs\/Qm[1-9A-HJ-NP-Za-km-z]{44}(\/.*\.(?i)(mp3|mp4|m4a))"
   RewriteRule (.*) http://127.0.0.1:8080$1 [P]
