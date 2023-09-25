@@ -91,6 +91,6 @@ An IPFS hosted website - https://gateway.ipfspodcasting.net/ipfs/QmNksJqvwHzNtAt
 A viral video - https://gateway.ipfspodcasting.net/ipfs/QmcniBv7UQ4gGPQQW2BwbD4ZZHzN3o3tPuNLZCbBchd1zh#t=85
 
 ### Conclusion
-This approach should handle the majority of podcast media files used by [IPFSPodcasting.net](https://ipfspodcasting.net) while blocking/forwarding the rest to ipfs.io.
+This approach should handle the majority of podcast media files used by [IPFSPodcasting.net](https://ipfspodcasting.net) while forwarding the rest (0.3%) to ipfs.io.
 
 More improvements to come as they are discovered/required. Use the discussions tab to discuss other options, or the issues tab to report problems with existing options.
