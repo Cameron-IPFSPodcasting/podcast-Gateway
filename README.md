@@ -40,7 +40,7 @@ All media files on [IPFSPodcasting.net](https://ipfspodcasting.net) are "wrapped
 ## Enclosure Analysis
 The current ipfspodcasting database contains 128K enclosures. This data was used to analyze enclosure extensions.
 
-![Untitled](https://github.com/Cameron-IPFSPodcasting/podcast-Gateway/assets/103131615/d89ecd40-49fa-4226-ba5c-b7947cf98f0c)
+![Untitled](https://github.com/Cameron-IPFSPodcasting/podcast-Gateway/assets/103131615/8bcce8a8-cdf8-4152-a8cd-1b0c152819f1)
 
 96% of enclosures use the mp3 extension. 
 99.7% use the mp3, m4a, or mp4 extension.
@@ -56,21 +56,11 @@ This regex will test if the url matches the ipfspodcasting format.
 ```
 ^\/ipfs\/Qm[1-9A-HJ-NP-Za-km-z]{44}(\/.*\.(?i)(mp3|mp4|m4a))
 ```
-Adding this to the (apache) proxy will allow urls that match, or redirect any mismatches to ipfs.io. Even a mismatch should perform normally using ipfs.io.
+Adding this to the proxy will allow urls that match, or redirect any mismatches to ipfs.io. Even a mismatch should perform normally using ipfs.io.
 
-(sample [virtualhost.conf (apache)](https://github.com/Cameron-IPFSPodcasting/podcast-Gateway/blob/main/sample-apache-virtualhost.conf)).
-```
-<VirtualHost 192.168.1.1:80>
-  RewriteEngine On
-  RewriteCond "%{REQUEST_URI}" "^\/ipfs\/Qm[1-9A-HJ-NP-Za-km-z]{44}(\/.*\.(?i)(mp3|mp4|m4a))"
-  RewriteRule (.*) http://127.0.0.1:8080$1 [P]
-  RewriteRule (.*) https://ipfs.io$1 [L,R]
+- Sample [virtualhost.conf](https://github.com/Cameron-IPFSPodcasting/podcast-Gateway/blob/main/sample-apache-virtualhost.conf) for apache.
+- Sample [location.conf](https://github.com/Cameron-IPFSPodcasting/podcast-Gateway/blob/main/sample-nginx-location.conf) for nginx.
 
-  ProxyPass / http://127.0.0.1:8080/
-  ProxyPassReverse / http://127.0.0.1:8080/
-  ProxyPreserveHost On
-</VirtualHost>
-```
 ### Sample / Test urls
 These links use the ipfspodcasting gateway (which is configured to check the url for a valid format). You can test your gateway by changing the domain to match your gateway's url...
 
