@@ -42,7 +42,7 @@ The current ipfspodcasting database contains 128K enclosures. This data was used
 
 ![Untitled](https://github.com/Cameron-IPFSPodcasting/podcast-Gateway/assets/103131615/d89ecd40-49fa-4226-ba5c-b7947cf98f0c)
 
-96% of enclosures use the .mp3 extension. 
+96% of enclosures use the mp3 extension. 
 99.7% use the mp3, m4a, or mp4 extension.
 
 ### URL Filter
