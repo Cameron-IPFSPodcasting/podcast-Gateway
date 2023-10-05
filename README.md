@@ -61,6 +61,9 @@ Adding this to the proxy will allow urls that match, or redirect any mismatches 
 - Sample [virtualhost.conf](https://github.com/Cameron-IPFSPodcasting/podcast-Gateway/blob/main/sample-apache-virtualhost.conf) for apache.
 - Sample [location.conf](https://github.com/Cameron-IPFSPodcasting/podcast-Gateway/blob/main/sample-nginx-location.conf) for nginx.
 
+### DNS Resolution
+IPFS uses multiaddr for node resolution. Setup your DNS by adding a TXT records for _dnsaddr. Use [this link](https://github.com/multiformats/multiaddr/blob/master/protocols/DNSADDR.md) to setup your gateway's DNS record.
+
 ### Sample / Test urls
 These links use the ipfspodcasting gateway (which is configured to check the url for a valid format). You can test your gateway by changing the domain to match your gateway's url...
 
