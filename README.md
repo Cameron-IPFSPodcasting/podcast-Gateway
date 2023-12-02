@@ -65,7 +65,7 @@ Adding this to the proxy will allow urls that match, or redirect any mismatches 
 IPFS uses multiaddr for node resolution. Setup your DNS by adding a TXT records for _dnsaddr. Use [this link](https://github.com/multiformats/multiaddr/blob/master/protocols/DNSADDR.md) to setup your gateway's DNS record.
 
 ### Sample / Test urls
-These links use the ipfspodcasting gateway (which is configured to check the url for a valid format). You can test your gateway by changing the domain to match your gateway's url...
+These links use the podcast gateway (which is configured to check the url for a valid format). You can test your gateway by changing the domain to match your gateway's url...
 
 A PC20#146 episode (works - stays on ipfs.podcastgateway.com) - https://ipfs.podcastgateway.com/ipfs/QmbBW9jBNh2G2wWXyywTQ9mSLuNXFUAmReSkSeRJsEbycH/PC20-146-2023-09-15-Final.mp3
 
