@@ -67,17 +67,17 @@ IPFS uses multiaddr for node resolution. Setup your DNS by adding a TXT records 
 ### Sample / Test urls
 These links use the ipfspodcasting gateway (which is configured to check the url for a valid format). You can test your gateway by changing the domain to match your gateway's url...
 
-A PC20#146 episode (works - stays on gateway.ipfspodcasting.net) - https://gateway.ipfspodcasting.net/ipfs/QmbBW9jBNh2G2wWXyywTQ9mSLuNXFUAmReSkSeRJsEbycH/PC20-146-2023-09-15-Final.mp3
+A PC20#146 episode (works - stays on ipfs.podcastgateway.com) - https://ipfs.podcastgateway.com/ipfs/QmbBW9jBNh2G2wWXyywTQ9mSLuNXFUAmReSkSeRJsEbycH/PC20-146-2023-09-15-Final.mp3
 
-Changing the filename to "mp5" doesn't match, so redirects to ipfs.io  (then fails because it doesn't exist) - https://gateway.ipfspodcasting.net/ipfs/QmbBW9jBNh2G2wWXyywTQ9mSLuNXFUAmReSkSeRJsEbycH/PC20-146-2023-09-15-Final.mp5
+Changing the filename to "mp5" doesn't match, so redirects to ipfs.io  (then fails because it doesn't exist) - https://ipfs.podcastgateway.com/ipfs/QmbBW9jBNh2G2wWXyywTQ9mSLuNXFUAmReSkSeRJsEbycH/PC20-146-2023-09-15-Final.mp5
 
 These urls will redirect to ipfs.io because they don't match the ipfspodcasting url format. Therefore aren't being served by the ipfspodcasting gateway.
 
-An Apollo 12 Image - https://gateway.ipfspodcasting.net/ipfs/QmSnuWmxptJZdLJpKRarxBMS2Ju2oANVrgbr2xWbie9b2D/albums/QXBvbGxvIDEyIE1hZ2F6aW5lIDQ2L1k=/21688456932_c56ec92952_o.jpg
+An Apollo 12 Image - https://ipfs.podcastgateway.com/ipfs/QmSnuWmxptJZdLJpKRarxBMS2Ju2oANVrgbr2xWbie9b2D/albums/QXBvbGxvIDEyIE1hZ2F6aW5lIDQ2L1k=/21688456932_c56ec92952_o.jpg
 
-An IPFS hosted website - https://gateway.ipfspodcasting.net/ipfs/QmNksJqvwHzNtAtYZVqFZFfdCVciY4ojTU2oFZQSFG9U7B/index.html
+An IPFS hosted website - https://ipfs.podcastgateway.com/ipfs/QmNksJqvwHzNtAtYZVqFZFfdCVciY4ojTU2oFZQSFG9U7B/index.html
 
-A viral video - https://gateway.ipfspodcasting.net/ipfs/QmcniBv7UQ4gGPQQW2BwbD4ZZHzN3o3tPuNLZCbBchd1zh#t=85
+A viral video - https://ipfs.podcastgateway.com/ipfs/QmcniBv7UQ4gGPQQW2BwbD4ZZHzN3o3tPuNLZCbBchd1zh#t=85
 
 ### Conclusion
 This approach should handle the majority of podcast media files used by [IPFSPodcasting.net](https://ipfspodcasting.net) while forwarding the rest (0.3%) to ipfs.io.
