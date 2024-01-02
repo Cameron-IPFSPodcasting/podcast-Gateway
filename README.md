@@ -61,6 +61,9 @@ Adding this to the proxy will allow urls that match, or redirect any mismatches 
 - Sample [virtualhost.conf](https://github.com/Cameron-IPFSPodcasting/podcast-Gateway/blob/main/sample-apache-virtualhost.conf) for apache.
 - Sample [location.conf](https://github.com/Cameron-IPFSPodcasting/podcast-Gateway/blob/main/sample-nginx-location.conf) for nginx.
 
+### Enable "CORS"
+Cross-Origin Resource Sharing is used by the majority of podcast players and web apps. Enabling CORS is required to allow apps to stream podcast episodes. The [Apache example](https://github.com/Cameron-IPFSPodcasting/podcast-Gateway/blob/main/sample-apache-virtualhost.conf) includes the configuration to allow cross-origin requests.
+
 ### DNS Resolution
 IPFS uses multiaddr for node resolution. Setup your DNS by adding a TXT records for _dnsaddr. Use [this link](https://github.com/multiformats/multiaddr/blob/master/protocols/DNSADDR.md) to setup your gateway's DNS record.
 
