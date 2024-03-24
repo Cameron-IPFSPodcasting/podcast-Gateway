@@ -1,6 +1,5 @@
 # Gateway Update Script
-
-Use this script to communicate changes with IPFSPodcasting.net (run from your IPFS gateway).
+Use this script to communicate gateway changes with IPFSPodcasting.net (run from your IPFS gateway).
 
 ```
 usage: ipfsgateway.py [-h] [--status {up,down}] [--maxsize MAXSIZE] [--peers] [--gc] [--email EMAIL]
@@ -20,14 +19,17 @@ options:
 
 You may also manage your gateway via https://ipfspodcasting.net/Manage/Gateway
 ```
-## IPFS Binary
-
-The script will look for your IPFS binary in /usr/local/bin; /usr/bin; or /bin;
-
-If you have installed IPFS in a non-standard location, use the --ipfspath option to specify the directory containing the IPFS binary.
-
 ## First Run
+On first run, you must supply an email address to link/notify your account at [IPFSPodcasting.net](https://IPFSPodcasting.net/Manage)
+
+Once linked to your account, an API Key will be generated for future updates.
 
 ## API Key
+Use your API Key to communicate future updates with the `--apikey` option. You can also modify this script to add your API Key.
 
 ## Status Updates
+
+### IPFS Binary
+The script will look for your IPFS binary in `/usr/local/bin;` `/usr/bin;` or `/bin;`
+
+If you have installed IPFS in a non-standard location, use the `--ipfspath` option to specify the directory containing your IPFS binary.
