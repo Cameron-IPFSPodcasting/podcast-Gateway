@@ -34,7 +34,7 @@ To inform IPFS Podcasting of your gateway status, use `--status up` to receive t
 
 This can be automated for maintenance, bandwidth usage (self-monitored), or time of day.
 
-##Website
+## Website
 You may update your status, domain name, and payment info using the [website](https://IPFSPodcasting.net/Manage/Gateway).
 ![Untitled](https://github.com/Cameron-IPFSPodcasting/podcast-Gateway/assets/103131615/bb81e951-244e-4efe-98ce-87909332a3e7)
 
