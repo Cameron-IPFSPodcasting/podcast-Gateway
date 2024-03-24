@@ -25,7 +25,9 @@ On first run, you must supply an email address to link/notify your account at [I
 Once linked to your account, an API Key will be generated for future updates.
 
 ## API Key
-Use your API Key to communicate future updates with the `--apikey` option. You can also modify this script to add your API Key.
+Use your API Key to communicate future updates with the `--apikey` option. You can also [modify this script](https://github.com/Cameron-IPFSPodcasting/podcast-Gateway/blob/72bf0f33a1e7d53d5c0f5314e3064c38554232ee/ipfspodcastgateway/ipfspodcastgateway.py#L31) (locally) to add your API Key.
+
+To generate a new API Key, visit on your account page at [IPFSPodcasting.net](https://IPFSPodcasting.net/Manage/Gateway)
 
 ## Status Updates
 
