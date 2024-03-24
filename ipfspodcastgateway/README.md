@@ -38,10 +38,11 @@ This can be automated for maintenance, bandwidth usage (self-monitored), or time
 You may update your status, domain name, and payment info using the [website](https://IPFSPodcasting.net/Manage/Gateway).
 ![Untitled](https://github.com/Cameron-IPFSPodcasting/podcast-Gateway/assets/103131615/bb81e951-244e-4efe-98ce-87909332a3e7)
 
+## Additional Options
 ### Max file to stream
 You can also set `--maxsize` to restrict hosting large files.
 
-##Peer Connect
+### Peer Connect
 Use `--peers` to establish connections with other IPFS Podcasting Gateways.
 
 ### Garbage Collection
